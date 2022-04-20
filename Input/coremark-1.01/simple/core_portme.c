@@ -37,11 +37,11 @@
 	Use lower values to increase resolution, but make sure that overflow does not occur.
 	If there are issues with the return value overflowing, increase this value.
 	*/
-#define NSECS_PER_SEC CLOCKS_PER_SEC
+#define NSECS_PER_SEC SYSTICK_CLOCK
 #define CORETIMETYPE clock_t 
-#define GETMYTIME(_t) (*_t=clock())
+#define GETMYTIME(_t)
 #define MYTIMEDIFF(fin,ini) ((fin)-(ini))
-#define TIMER_RES_DIVIDER 1
+#define TIMER_RES_DIVIDER (SYSTICK_CLOCK/1000)
 #define SAMPLE_TIME_IMPLEMENTATION 1
 #define EE_TICKS_PER_SEC (NSECS_PER_SEC / TIMER_RES_DIVIDER)
 
@@ -56,6 +56,7 @@ static CORETIMETYPE start_time_val, stop_time_val;
 */
 void start_time(void) {
 	GETMYTIME(&start_time_val );      
+	start_time_val = uwTick;
 }
 /* Function : stop_time
 	This function will be called right after ending the timed portion of the benchmark.
@@ -65,6 +66,7 @@ void start_time(void) {
 */
 void stop_time(void) {
 	GETMYTIME(&stop_time_val );      
+	stop_time_val = uwTick;
 }
 /* Function : get_time
 	Return an abstract "ticks" number that signifies time on the system.
