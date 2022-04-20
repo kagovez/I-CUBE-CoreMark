@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" DBVersion="V4.0" Name="I-CUBE-CoreMark" RootFolder="Packs/3rdParty/I-CUBE-CoreMark/0.0.2/" Version="0.0.2" ns0:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/thirdPartyDb.xsd">
+<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" CodeTemplate="app_I-CUBE-CoreMark_h.ftl;app_I-CUBE-CoreMark_c.ftl" DBVersion="V4.0" Name="I-CUBE-CoreMark" RootFolder="Packs/3rdParty/I-CUBE-CoreMark/0.0.2/" Version="0.0.2" ns0:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/thirdPartyDb.xsd">
     <RefConfig Name="UtilityJjMISC">
         <Component Name="Utility:MISC:$UtilityJjMISC"/>
         <ConfigFile Name="CORE_PORTME_H"/>
