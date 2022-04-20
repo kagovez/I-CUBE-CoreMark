@@ -15,7 +15,15 @@
     <components>
         <component Cclass="Utility" Cgroup="MISC" Cversion="0.0.2" maxInstances="1">
             <description>Top component for parameters</description>
-            <files/>
+            <files>
+                <file category="source" name="Utilities/MISC/core_list_join.c"/>
+                <file category="source" name="Utilities/MISC/core_main.c"/>
+                <file category="source" name="Utilities/MISC/core_matrix.c"/>
+                <file category="source" name="Utilities/MISC/core_state.c"/>
+                <file category="source" name="Utilities/MISC/core_util.c"/>
+                <file category="header" name="Utilities/MISC/coremark.h"/>
+                <file category="source" name="Utilities/MISC/core_portme.c"/>
+            </files>
         </component>
     </components>
 </package>
