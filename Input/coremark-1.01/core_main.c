@@ -86,11 +86,11 @@ char *mem_name[3] = {"Static","Heap","Stack"};
 */
 
 #if MAIN_HAS_NOARGC
-MAIN_RETURN_TYPE main(void) {
+MAIN_RETURN_TYPE coremark_main(void) {
 	int argc=0;
 	char *argv[1];
 #else
-MAIN_RETURN_TYPE main(int argc, char *argv[]) {
+MAIN_RETURN_TYPE coremark_main(int argc, char *argv[]) {
 #endif
 	ee_u16 i,j=0,num_algorithms=0;
 	ee_s16 known_id=-1,total_errors=0;
@@ -284,8 +284,8 @@ MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 	}
 	total_errors+=check_data_types();
 	/* and report results */
-	ee_printf("CoreMark Size    : %lu\n",(ee_u32)results[0].size);
-	ee_printf("Total ticks      : %lu\n",(ee_u32)total_time);
+	ee_printf("CoreMark Size    : %u\n",(ee_u32)results[0].size);
+	ee_printf("Total ticks      : %u\n",(ee_u32)total_time);
 #if HAS_FLOAT
 	ee_printf("Total time (secs): %f\n",time_in_secs(total_time));
 	if (time_in_secs(total_time) > 0)
@@ -300,8 +300,17 @@ MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 		total_errors++;
 	}
 
-	ee_printf("Iterations       : %lu\n",(ee_u32)default_num_contexts*results[0].iterations);
-	ee_printf("Compiler version : %s\n",COMPILER_VERSION);
+	ee_printf("Iterations       : %u\n",(ee_u32)default_num_contexts*results[0].iterations);
+#if defined(__GNUC__) && defined (__ARMCC_VERSION)
+	ee_printf("Compiler version : Keil ver%d\n",__ARMCC_VERSION);
+#elif defined(__CC_ARM)
+	ee_printf("Compiler version : Keil ver%d\n",__ARMCC_VERSION);
+#elif defined(__GNUC__)
+	ee_printf("Compiler version : GCC ver%d.%d.%d\n",__GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
+#elif defined(__ICCARM__)
+	//ee_printf("Compiler version : IAR %d\n",__VER__);
+	ee_printf("Compiler version : IAR ver%d\n",__IAR_SYSTEMS_ICC__);
+#endif
 	ee_printf("Compiler flags   : %s\n",COMPILER_FLAGS);
 #if (MULTITHREAD>1)
 	ee_printf("Parallel %s : %d\n",PARALLEL_METHOD,default_num_contexts);
@@ -324,7 +333,16 @@ MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 		ee_printf("Correct operation validated. See readme.txt for run and reporting rules.\n");
 #if HAS_FLOAT
 		if (known_id==3) {
-			ee_printf("CoreMark 1.0 : %f / %s %s",default_num_contexts*results[0].iterations/time_in_secs(total_time),COMPILER_VERSION,COMPILER_FLAGS);
+#if defined(__GNUC__) && defined (__ARMCC_VERSION)
+			ee_printf("CoreMark 1.0 : %f / Keil ver%d",default_num_contexts*results[0].iterations/time_in_secs(total_time), __ARMCC_VERSION);
+#elif defined(__CC_ARM)
+			ee_printf("CoreMark 1.0 : %f / Keil ver%d",default_num_contexts*results[0].iterations/time_in_secs(total_time), __ARMCC_VERSION);
+#elif defined(__GNUC__)
+			ee_printf("CoreMark 1.0 : %f / GCC ver%d.%d.%d",default_num_contexts*results[0].iterations/time_in_secs(total_time), __GNUC__,__GNUC_MINOR__,  __GNUC_PATCHLEVEL__);
+#elif defined(__ICCARM__)
+			ee_printf("CoreMark 1.0 : %f / IAR ver%d",default_num_contexts*results[0].iterations/time_in_secs(total_time), __IAR_SYSTEMS_ICC__);
+#endif
+
 #if defined(MEM_LOCATION) && !defined(MEM_LOCATION_UNSPEC)
 			ee_printf(" / %s",MEM_LOCATION);
 #else
