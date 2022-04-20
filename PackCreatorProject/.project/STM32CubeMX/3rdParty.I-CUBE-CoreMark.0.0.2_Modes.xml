@@ -4,6 +4,7 @@
     <RefMode Abstract="true" Name="UtilityJjMISC">
         <ConfigForMode>UtilityJjMISC</ConfigForMode>
         <Parameter Name="UtilityJjMISC"/>
+        <Parameter Added="true" Name="ITERATIONS"/>
     </RefMode>
     <RefMode Abstract="true" Name="DeviceJjApplication">
         <ConfigForMode>DeviceJjApplication</ConfigForMode>
@@ -39,4 +40,5 @@
         <PossibleValue Comment="DISABLE" Value="DISABLE"/>
         <PossibleValue Comment="CoreMark Application Component" Semaphore="SEMApplicationCcDeviceJjApplicationJjcoremarkapp" Value="coremarkapp"/>
     </RefParameter>
+    <RefParameter Added="true" Comment="CoreMark Iteration" DefaultValue="500" Group="Basic Parameters" Max="65535" Min="1" Name="ITERATIONS" TabName="Parameter Settings" Type="integer" Unit=""/>
 </IP>
