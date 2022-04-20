@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package schemaVersion="1.6.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor>3rdParty</vendor>
+    <name>I-CUBE-CoreMark::FROM_SCRATCH_NOT_GENERATED::CUBE_RULES</name>
+    <description>Helper for easy integration of CoreMark</description>
+    <url/>
+    <releases/>
+</package>
