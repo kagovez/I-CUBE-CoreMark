@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" DBVersion="V4.0" Name="I-CUBE-CoreMark" RootFolder="Packs/3rdParty/I-CUBE-CoreMark/0.0.2/" Version="0.0.2" ns0:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/thirdPartyDb.xsd">
+    <RefConfig Name="UtilityJjMISC">
+        <Component Name="Utility:MISC:$UtilityJjMISC"/>
+    </RefConfig>
+    <RefConfig Name="DeviceJjApplication">
+        <Component Name="ApplicationCcDevice:Application:coremarkapp:$ApplicationCcDeviceJjApplication"/>
+    </RefConfig>
+    <RefComponent Cclass="Utility" Cgroup="MISC" Cversion="0Gg0Gg2">
+        <File Category="source" Condition="" Name="Utilities/MISC/core_list_join.c"/>
+        <File Category="source" Condition="" Name="Utilities/MISC/core_main.c"/>
+        <File Category="source" Condition="" Name="Utilities/MISC/core_matrix.c"/>
+        <File Category="source" Condition="" Name="Utilities/MISC/core_state.c"/>
+        <File Category="source" Condition="" Name="Utilities/MISC/core_util.c"/>
+        <File Category="header" Condition="" Name="Utilities/MISC/coremark.h"/>
+        <File Category="source" Condition="" Name="Utilities/MISC/core_portme.c"/>
+    </RefComponent>
+    <RefComponent Cclass="ApplicationCcDevice" Cgroup="Application" Cversion="0Gg0Gg2">
+        <SubComponent Csub="" Cvariant="coremarkapp:coremarkapp" ModuleName="CoreMarkApp"/>
+    </RefComponent>
+</IP>

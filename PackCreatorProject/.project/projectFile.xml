@@ -29,6 +29,10 @@
         <bundle Cbundle="Application" Cclass="Device" Cversion="0.0.2">
             <description>CoreMark Application Bundle</description>
             <doc>C:/00_myProjects/I-CUBE-CoreMark/I-CUBE-CoreMark/Input/README.txt::README.txt</doc>
+            <component Cgroup="Application" Cvariant="coremarkapp" maxInstances="1">
+                <description>CoreMark Application Component</description>
+                <files/>
+            </component>
         </bundle>
     </components>
 </package>
