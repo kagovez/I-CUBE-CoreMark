@@ -2,11 +2,15 @@
 <IP xmlns="http://mcd.rou.st.com/modules.php?name=mcu" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" DBVersion="V4.0" Name="I-CUBE-CoreMark" RootFolder="Packs/3rdParty/I-CUBE-CoreMark/0.0.2/" Version="0.0.2" ns0:schemaLocation="http://mcd.rou.st.com/modules.php?name=mcu ../../../../../../../doc/V4/Development/Specifications/db/thirdPartyDb.xsd">
     <RefConfig Name="UtilityJjMISC">
         <Component Name="Utility:MISC:$UtilityJjMISC"/>
+        <ConfigFile Name="CORE_PORTME_H"/>
         <ConfigFile Name="UtilityJjMISC_conf"/>
     </RefConfig>
     <RefConfig Name="DeviceJjApplication">
         <Component Name="ApplicationCcDevice:Application:coremarkapp:$ApplicationCcDeviceJjApplication"/>
     </RefConfig>
+    <RefConfigFile Added="true" Description="FTL for core_portme.h" Name="CORE_PORTME_H" Template="core_portme_h.ftl">
+        <File Category="header" Condition="all" Name="App/core_portme.h"/>
+    </RefConfigFile>
     <RefConfigFile Added="true" Name="UtilityJjMISC_conf" Template="default_conf.ftl">
         <File Category="header" Condition="all" Name="./3rdParty.I-CUBE-CoreMark_conf.h"/>
         <Argument AddressOf="false" Comment="ITERATIONS" GenericType="simple" Name="ITERATIONS" OptimizationCondition="equal"/>
