@@ -9,4 +9,13 @@
 - This pack version is compatible with STM32CubeMX V6.5.0
 </release>
     </releases>
+    <taxonomy>
+        <description Cclass="Utility">Utility</description>
+    </taxonomy>
+    <components>
+        <component Cclass="Utility" Cgroup="MISC" Cversion="0.0.2" maxInstances="1">
+            <description>Top component for parameters</description>
+            <files/>
+        </component>
+    </components>
 </package>
