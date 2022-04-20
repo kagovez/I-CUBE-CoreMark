@@ -10,6 +10,7 @@
     <RefConfigFile Added="true" Name="UtilityJjMISC_conf" Template="default_conf.ftl">
         <File Category="header" Condition="all" Name="./3rdParty.I-CUBE-CoreMark_conf.h"/>
         <Argument AddressOf="false" Comment="ITERATIONS" GenericType="simple" Name="ITERATIONS" OptimizationCondition="equal"/>
+        <Argument AddressOf="false" Comment="PRINTF_UART_PORT" GenericType="simple" Name="PRINTF_UART_PORT" OptimizationCondition="equal"/>
     </RefConfigFile>
     <RefComponent Cclass="Utility" Cgroup="MISC" Cversion="0Gg0Gg2">
         <File Category="source" Condition="" Name="Utilities/MISC/core_list_join.c"/>
