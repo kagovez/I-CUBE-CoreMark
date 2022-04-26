@@ -20,7 +20,7 @@
         <description Cclass="Utility">Utility</description>
     </taxonomy>
     <components>
-        <component Cclass="Utility" Cgroup="MISC" Cversion="0.0.2" maxInstances="1">
+        <component Cclass="Utility" Cgroup="MISC" Cversion="0.1.0" maxInstances="1">
             <description>Top component for parameters</description>
             <files>
                 <file category="source" name="Utilities/MISC/core_list_join.c"/>
@@ -32,7 +32,7 @@
                 <file category="source" name="Utilities/MISC/core_portme.c"/>
             </files>
         </component>
-        <bundle Cbundle="Application" Cclass="Device" Cversion="0.0.2">
+        <bundle Cbundle="Application" Cclass="Device" Cversion="0.1.0">
             <description>CoreMark Application Bundle</description>
             <doc>README.txt</doc>
             <component Cgroup="Application" Cvariant="coremarkapp" maxInstances="1">

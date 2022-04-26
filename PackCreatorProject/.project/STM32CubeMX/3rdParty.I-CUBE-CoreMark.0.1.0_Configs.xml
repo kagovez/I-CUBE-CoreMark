@@ -16,7 +16,7 @@
         <Argument AddressOf="false" Comment="ITERATIONS" GenericType="simple" Name="ITERATIONS" OptimizationCondition="equal"/>
         <Argument AddressOf="false" Comment="PRINTF_UART_PORT" GenericType="simple" Name="PRINTF_UART_PORT" OptimizationCondition="equal"/>
     </RefConfigFile>
-    <RefComponent Cclass="Utility" Cgroup="MISC" Cversion="0Gg0Gg2">
+    <RefComponent Cclass="Utility" Cgroup="MISC" Cversion="0Gg1Gg0">
         <File Category="source" Condition="" Name="Utilities/MISC/core_list_join.c"/>
         <File Category="source" Condition="" Name="Utilities/MISC/core_main.c"/>
         <File Category="source" Condition="" Name="Utilities/MISC/core_matrix.c"/>
@@ -25,7 +25,7 @@
         <File Category="header" Condition="" Name="Utilities/MISC/coremark.h"/>
         <File Category="source" Condition="" Name="Utilities/MISC/core_portme.c"/>
     </RefComponent>
-    <RefComponent Cclass="ApplicationCcDevice" Cgroup="Application" Cversion="0Gg0Gg2">
-        <SubComponent Csub="" Cvariant="coremarkapp:coremarkapp" ModuleName="CoreMarkApp"/>
+    <RefComponent Cclass="ApplicationCcDevice" Cgroup="Application" Cversion="0Gg1Gg0">
+        <SubComponent Csub="" Cvariant="coremarkapp:coremarkapp"/>
     </RefComponent>
 </IP>

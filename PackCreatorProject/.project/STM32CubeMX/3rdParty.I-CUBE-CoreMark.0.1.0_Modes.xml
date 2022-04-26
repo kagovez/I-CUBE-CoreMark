@@ -16,7 +16,7 @@
             <ModeLogicOperator Name="OR">
                 <Mode Name="UtilityJjMISC">
                     <SignalLogicalOp Name="AND">
-                        <Signal Name="VS_UtilityJjMISC_0.0.2_0.1.0"/>
+                        <Signal Name="VS_UtilityJjMISC_0.1.0_0.1.0"/>
                     </SignalLogicalOp>
                 </Mode>
             </ModeLogicOperator>
@@ -25,14 +25,14 @@
             <ModeLogicOperator Name="OR">
                 <Mode Name="DeviceJjApplication">
                     <SignalLogicalOp Name="AND">
-                        <Signal Name="VS_DeviceJjApplication_0.0.2_0.1.0"/>
+                        <Signal Name="VS_DeviceJjApplication_0.1.0_0.1.0"/>
                     </SignalLogicalOp>
                 </Mode>
             </ModeLogicOperator>
         </Mode>
     </ModeLogicOperator>
-    <RefSignal Name="VS_UtilityJjMISC_0.0.2_0.1.0" Virtual="true"/>
-    <RefSignal Name="VS_DeviceJjApplication_0.0.2_0.1.0" Virtual="true"/>
+    <RefSignal Name="VS_UtilityJjMISC_0.1.0_0.1.0" Virtual="true"/>
+    <RefSignal Name="VS_DeviceJjApplication_0.1.0_0.1.0" Virtual="true"/>
     <RefParameter Comment="Top component for parameters" DefaultValue="false" Group="Software component selection" Name="UtilityJjMISC" TabName="UtilityJjMISC" Type="boolean" Visible="false">
         <PossibleValue Comment="ENABLE" Semaphore="SEMUtilityJjMISC" Value="true"/>
         <PossibleValue Comment="DISABLE" Value="false"/>
