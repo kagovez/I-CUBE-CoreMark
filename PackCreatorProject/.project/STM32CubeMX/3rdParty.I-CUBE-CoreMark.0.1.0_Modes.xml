@@ -39,7 +39,7 @@
     </RefParameter>
     <RefParameter Comment="Device Application" DefaultValue="disable" Group="Software component selection" Name="ApplicationCcDeviceJjApplication" TabName="DeviceJjApplication" Type="list" Visible="false">
         <PossibleValue Comment="DISABLE" Value="DISABLE"/>
-        <PossibleValue Comment="CoreMark Application Component" Semaphore="SEMApplicationCcDeviceJjApplicationJjcoremarkapp" Value="coremarkapp"/>
+        <PossibleValue Comment="CoreMark Application Component" Semaphore="SEMApplicationCcDeviceJjApplicationJjCoreMarkApp" Value="CoreMarkApp"/>
     </RefParameter>
     <RefParameter Added="true" Comment="CoreMark Iteration" DefaultValue="500" Group="Basic Parameters" Max="65535" Min="1" Name="ITERATIONS" TabName="Parameter Settings" Type="integer" Unit=""/>
     <RefParameter Added="true" Comment="UART Port for printf" DefaultValue="huart1" Group="Basic Parameters" Name="PRINTF_UART_PORT" TabName="Parameter Settings" Type="list">

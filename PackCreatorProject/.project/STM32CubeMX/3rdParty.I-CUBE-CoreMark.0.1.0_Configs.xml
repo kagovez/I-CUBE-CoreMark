@@ -6,7 +6,7 @@
         <ConfigFile Name="UtilityJjMISC_conf"/>
     </RefConfig>
     <RefConfig Name="DeviceJjApplication">
-        <Component Name="ApplicationCcDevice:Application:coremarkapp:$ApplicationCcDeviceJjApplication"/>
+        <Component Name="ApplicationCcDevice:Application:CoreMarkApp:$ApplicationCcDeviceJjApplication"/>
     </RefConfig>
     <RefConfigFile Added="true" Description="FTL for core_portme.h" Name="CORE_PORTME_H" Template="core_portme_h.ftl">
         <File Category="header" Condition="all" Name="App/core_portme.h"/>
@@ -26,6 +26,6 @@
         <File Category="source" Condition="" Name="Utilities/MISC/core_portme.c"/>
     </RefComponent>
     <RefComponent Cclass="ApplicationCcDevice" Cgroup="Application" Cversion="0Gg1Gg0">
-        <SubComponent Csub="" Cvariant="coremarkapp:coremarkapp"/>
+        <SubComponent Csub="" Cvariant="CoreMarkApp:CoreMarkApp" ModuleName="CoreMarkApp"/>
     </RefComponent>
 </IP>
