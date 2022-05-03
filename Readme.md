@@ -1,7 +1,7 @@
 # I-CUBE-CoreMark
 
 ## Introduction
-I-CUBE-CoreMark is a helper which generats CoreMark project over STM32 with only few clicks in STM32CubeMX. 
+I-CUBE-CoreMark is a helper which generates CoreMark project over STM32 with only few clicks in STM32CubeMX. 
 
 CoreMark source code (v1.01) used by I-CUBE-CoreMark is originally from:
 https://github.com/eembc/coremark
@@ -85,7 +85,7 @@ But the default U(S)ART1 is used in I-CUBE-CoreMark:
 The following is the test result of STM32F746 whose official CoreMark score is 1082:
 ![](docs/0603.png)
     
-#### 8. Situatioins
+#### 8. Situations
 1.  Compiling error, for example: missing symbol for huart1
 Explained in 6.2 above
 2.	No output at all
