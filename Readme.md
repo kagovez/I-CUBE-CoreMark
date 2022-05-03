@@ -1,6 +1,6 @@
 # I-CUBE-CoreMark
 
-##Introduction
+## Introduction
 I-CUBE-CoreMark is a helper which generats CoreMark project over STM32 with only few clicks in STM32CubeMX. 
 
 CoreMark source code (v1.01) used by I-CUBE-CoreMark is originally from:
